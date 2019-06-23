@@ -5,18 +5,19 @@ using UnityEngine;
 public class AudioTest : MonoBehaviour
 {
     public AudioClip clip;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public AudioClip lead;
+    public AudioClip mainMusic;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Joy1B"))
         {
             AudioManager.instance.PlaySingle(clip);
+        }
+
+        if (Input.GetButtonDown("Joy1Select"))
+        {
+            AudioManager.instance.PlayMusicWithLead(lead, mainMusic);
         }
     }
 }

@@ -53,6 +53,11 @@ public class Player : MonoBehaviour
         _character = character;
     }
 
+    internal ShopkinBaseCharacter GetShopkin()
+    {
+        return _character;
+    }
+
     internal void InstantiateCharacter()
     {
         Instantiate(_character).player = this;

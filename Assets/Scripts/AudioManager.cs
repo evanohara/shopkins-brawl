@@ -5,11 +5,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource efxSource;                   //Drag a reference to the audio source which will play the sound effects.
-    public AudioSource musicSource;                 //Drag a reference to the audio source which will play the music.
+    public AudioSource musicSource1;                 //Drag a reference to the audio source which will play the music.
+    public AudioSource musicSource2;                 //Drag a reference to the audio source which will play the music.
+    private AudioSource currentMusicSource;
+
     public static AudioManager instance = null;     //Allows other scripts to call functions from SoundManager.             
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
-
 
     void Awake()
     {
@@ -21,6 +23,9 @@ public class AudioManager : MonoBehaviour
         else if (instance != this)
             //Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
             Destroy(gameObject);
+
+        if (currentMusicSource == null)
+            currentMusicSource = musicSource1;
 
         //Set SoundManager to DontDestroyOnLoad so that it won't be destroyed when reloading our scene.
         DontDestroyOnLoad(gameObject);
@@ -59,12 +64,44 @@ public class AudioManager : MonoBehaviour
 
     public void PauseMusic()
     {
-        musicSource.Pause();
+        currentMusicSource.Pause();
     }
 
     public void ResumeMusic()
     {
-        musicSource.Play();
+        currentMusicSource.Play();
+    }
+
+    public void PlayMusicWithLead(AudioClip lead, AudioClip mainLoop)
+    {
+        if (currentMusicSource == musicSource1)
+        {
+            Debug.Log(name + ": Current Source is 1, loading lead into 2.");
+            musicSource2.clip = lead;
+            musicSource1.clip = mainLoop;
+            StitchAudio(musicSource2, musicSource1);
+        }
+        else
+        {
+            Debug.Log(name + ": Current Source is 2, loading lead into 1.");
+            musicSource1.clip = lead;
+            musicSource2.clip = mainLoop;
+            StitchAudio(musicSource1, musicSource2);
+        }
+    }
+
+    internal void StitchAudio(AudioSource leadSource, AudioSource mainSource)
+    {
+        double leadDuration = CalculateClipDuration(leadSource);
+        Debug.Log(leadDuration);
+        leadSource.PlayScheduled(AudioSettings.dspTime + 0.1);
+        mainSource.PlayScheduled(AudioSettings.dspTime + 0.1 + CalculateClipDuration(leadSource));
+        mainSource.loop = true;
+    }
+
+    internal double CalculateClipDuration(AudioSource source)
+    {
+        return (double)source.clip.samples / source.clip.frequency;
     }
 
 }

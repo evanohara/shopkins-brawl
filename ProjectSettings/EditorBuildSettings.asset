@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectionMenu.unity
     guid: af9f618ed2a7954498624a9cd91531ac
   - enabled: 1
-    path: Assets/Scenes/LevelOne.unity
-    guid: a5872b0ad46cc3445adcbf78f9b3633a
+    path: Assets/Scenes/StreetsOfShopville.unity
+    guid: b7ac2d8c31fd6f544b67726d2bd7fa8e
   m_configObjects: {}

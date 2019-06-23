@@ -18,7 +18,6 @@ public class MatchHandler : MonoBehaviour
         }
 
         InstantiatePlayerCharacters();
-        SetPlayersToInstantiatedCharacters();
         SpawnPlayers();
     }
 
@@ -27,13 +26,6 @@ public class MatchHandler : MonoBehaviour
         foreach (Player p in players)
         {
             p.InstantiateCharacter();
-        }
-    }
-    void SetPlayersToInstantiatedCharacters()
-    {
-        foreach (Player p in players)
-        {
-
         }
     }
 
@@ -53,7 +45,7 @@ public class MatchHandler : MonoBehaviour
             int randomSpawnIndex = Random.Range(0, remainingUnusedSpawners);
             PlayerSpawner spawner = unusedSpawners[randomSpawnIndex];
             unusedSpawners.Remove(spawner);
-            spawner.SetSpawnObject(p.gameObject);
+            spawner.SetSpawnObject(p.GetShopkin().gameObject);
             spawner.Spawn();
         }
     }

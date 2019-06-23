@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ShopkinBaseCharacter : MonoBehaviour
 {
-    protected float baseSpeed = 1.0f;
+    protected float baseSpeed = 2.0f;
     public Player player;
     protected Rigidbody2D rb;
     internal SpriteRenderer sr;
+    internal Animator animator;
 
     void Awake()
     {
@@ -17,17 +18,18 @@ public class ShopkinBaseCharacter : MonoBehaviour
             rb = GetComponent<Rigidbody2D>();
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
+        if (animator == null)
+            animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
-    void Update()
+    internal void Update()
     {
         float lh = player.GetHorizontal();
-        Debug.Log(lh);
+        animator.SetFloat("Horizontal", lh);
 
         if (lh > 0.1f || lh < -0.1f)
         {
-            Debug.Log(this.name + ": moving.");
             rb.velocity = new Vector2(lh * baseSpeed, rb.velocity.y);
         }
         else
