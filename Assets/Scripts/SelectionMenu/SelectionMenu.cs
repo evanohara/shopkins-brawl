@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static PlayerInput;
 
 public class SelectionMenu : MonoBehaviour
 {
@@ -17,12 +18,17 @@ public class SelectionMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandlePlayersInput();
+    }
+
+    private void HandlePlayersInput()
+    {
         // Determine if the game should start.
         if (Input.GetButtonDown("AnyStart"))
         {
-            Debug.Log(this.name + ": Loading Scene");
-            if (AllAreReady() && AtLeastTwoPlayers())
+            if (GameShouldStart())
             {
+                Debug.Log(this.name + ": Loading Scene");
                 StartCoroutine(LoadAsyncScene());
             }
         }
@@ -31,7 +37,7 @@ public class SelectionMenu : MonoBehaviour
         foreach (PlayerCharacterSelector p in playerSelectors)
         {
             // Player Activation and Final Selection
-            if (p.player.ButtonIsDown(PlayerInput.Button.B))
+            if (p.player.ButtonIsDown(Button.B))
             {
                 Debug.Log(this.name + ": Player " + p.player.playerNumber + " has pressed B.");
                 if (!activePlayers.Contains(p.player.playerNumber))
@@ -47,28 +53,32 @@ public class SelectionMenu : MonoBehaviour
                     }
                 }
             }
-
             // Player Moving Selection
             if (p.canSelect)
             {
-                PlayerInput.Direction direction = p.player.GetMajorDirection();
+                Direction direction = p.player.GetMajorDirection();
                 switch (direction)
                 {
-                    case PlayerInput.Direction.None:
+                    case Direction.None:
                         break;
-                    case PlayerInput.Direction.Left:
+                    case Direction.Left:
                         p.SetTargetCharacter(p.targetCharacter.leftChar);
                         break;
-                    case PlayerInput.Direction.Right:
+                    case Direction.Right:
                         p.SetTargetCharacter(p.targetCharacter.rightChar);
                         break;
-                    case PlayerInput.Direction.Up:
+                    case Direction.Up:
                         break;
-                    case PlayerInput.Direction.Down:
+                    case Direction.Down:
                         break;
                 }
             }
         }
+    }
+
+    private bool GameShouldStart()
+    {
+        return AtLeastTwoPlayers() && AllAreReady();
     }
 
     private bool AtLeastTwoPlayers()
@@ -80,6 +90,8 @@ public class SelectionMenu : MonoBehaviour
             if (s.SelectionFinalized)
                 numReady++;
         }
+        if (TESTING.Testing())
+            return (numReady > 0);
         return (numReady > 1);
     }
 
@@ -103,22 +115,22 @@ public class SelectionMenu : MonoBehaviour
         Debug.Log(this.name + ": Player was not active and is now being activated.");
         activePlayers.Add(p.player.playerNumber);
         p.Activate();
-        SetPlayerSelectionToFirstUntargeted(p);
+        SetPlayerSelectionToUntargeted(p);
     }
 
-    private void SetPlayerSelectionToFirstUntargeted(PlayerCharacterSelector p)
+    private void SetPlayerSelectionToUntargeted(PlayerCharacterSelector p)
     {
         foreach (SelectableCharacter selectableCharacter in selectableCharacters)
         {
             if (!selectableCharacter.HasOccupyingPlayers())
             {
                 selectableCharacter.AddOccupyingPlayer(p);
-                Debug.Log(this.name + ": Setting to untargeted char BITCH.");
+                Debug.Log(name + ": Setting to untargeted char.");
                 p.SetTargetCharacter(selectableCharacter);
                 return;
             }
         }
-        Debug.LogError(this.name + ": Target never set");
+        Debug.LogError(name + ": Target never set");
     }
 
     IEnumerator LoadAsyncScene()

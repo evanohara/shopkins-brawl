@@ -37,6 +37,7 @@ public class PlayerInput : MonoBehaviour
                 return false;
         }
     }
+
     internal float GetHorizontal()
     {
         return Input.GetAxis(xAxis);

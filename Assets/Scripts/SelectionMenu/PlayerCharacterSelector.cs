@@ -51,13 +51,16 @@ public class PlayerCharacterSelector : MonoBehaviour
     internal void FinalizeSelection()
     {
         Debug.Log(this.name + ": Finalizing Selection.");
-        playerSelectionTargetUI.FinalizeAnimation();
 
         if (targetCharacter == null)
         {
             Debug.LogError(this.name + ": Target is null.");
+            return;
         }
+
+        playerSelectionTargetUI.FinalizeAnimation();
         player.AssignCharacter(targetCharacter.character);
+        targetCharacter.Select();
         SelectionFinalized = true;
         canSelect = false;
 

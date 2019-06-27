@@ -7,7 +7,6 @@ public class MatchHandler : MonoBehaviour
     public List<PlayerSpawner> playerSpawners;
     List<Player> players;
 
-    // Start is called before the first frame update
     void Start()
     {
         GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("ActivePlayer");
@@ -31,7 +30,7 @@ public class MatchHandler : MonoBehaviour
 
     void SpawnPlayers()
     {
-        Debug.Log(this.name + ": Spawning Players.");
+        Debug.Log(name + ": Spawning Players.");
         List<PlayerSpawner> unusedSpawners = new List<PlayerSpawner>();
 
         foreach (PlayerSpawner spawner in playerSpawners)
@@ -48,11 +47,5 @@ public class MatchHandler : MonoBehaviour
             spawner.SetSpawnObject(p.GetShopkin().gameObject);
             spawner.Spawn();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

@@ -7,9 +7,15 @@ public class SelectableCharacter : MonoBehaviour
     public ShopkinBaseCharacter character;
     public SelectableCharacter leftChar;
     public SelectableCharacter rightChar;
+    public AudioClip confirmationSound;
 
     private List<PlayerCharacterSelector> occupyingPlayers = new List<PlayerCharacterSelector>();
     public bool HasBeenSelected { get; set; }
+
+    internal void Select()
+    {
+        AudioManager.instance.PlaySingle(confirmationSound);
+    }
 
 
     internal void AddOccupyingPlayer(PlayerCharacterSelector p)

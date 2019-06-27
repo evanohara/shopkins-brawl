@@ -12,18 +12,13 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(gameObject);
         if (input == null)
-            input = this.gameObject.AddComponent<PlayerInput>();
+            input = gameObject.AddComponent<PlayerInput>();
     }
 
     private void Start()
     {
-        string[] names = Input.GetJoystickNames();
-        foreach (string name in names)
-        {
-            Debug.Log(Input.GetJoystickNames()[0].ToString());
-        }
         input.AssignController(playerNumber);
     }
 
