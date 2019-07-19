@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AppleBlossomAnimator
+  m_Controller: {fileID: 9100000, guid: 7f468da0202f253459f48358d370ab35, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a966c75702ffd754ca1f6e2383c88f69, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c5850c204e51e6a4494c1e20fc328d89, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c8a339bd7676b5f4dbfd2cc909eea9f0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 192340cd3a0ca904485c21b3b52d9e3d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 511fac3addd2ff942af2203512b43cd8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e0236e76b3035de46adccc34d49319b3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7fec9965ded6043489295fcb60c493b6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6151bad789f706b43b91c289531ca5f9, type: 2}

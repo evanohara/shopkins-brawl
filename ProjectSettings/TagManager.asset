@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - ActivePlayer
+  - EnemyProjectile
+  - Ground
+  - Character
+  - TopOnlyCollider
+  - FullCollider
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -14,8 +20,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Players
+  - Items
   - 
   - 
   - 
@@ -42,6 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Players
+  - name: FarBackground
+    uniqueID: 3305190635
+    locked: 0
+  - name: Characters
     uniqueID: 2577061537
+    locked: 0
+  - name: Effects
+    uniqueID: 2406803943
     locked: 0

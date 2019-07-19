@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7061363237609061923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2500190683067211011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04dd3b043f7a8d4429a89fd65d181267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healAmount: 30
+--- !u!1001 &5545033940119783849
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95f12cf6f01df294196b3d879004ffe3,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944803637554140330, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_Name
+      value: FirstAidItemPrefab Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26757705
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.478204
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.558545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488282499470689710, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470284266026579604, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677145907895311291, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_Name
+      value: ItemCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677145907895311291, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237867796767000220, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335180484902143437, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 95f12cf6f01df294196b3d879004ffe3,
+        type: 3}
+    - target: {fileID: 4335180484902143437, guid: b8d90997f990bd74d98e3c69359fd162,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b8d90997f990bd74d98e3c69359fd162, type: 3}
+--- !u!1 &2500190683067211011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7944803637554140330, guid: b8d90997f990bd74d98e3c69359fd162,
+    type: 3}
+  m_PrefabInstance: {fileID: 5545033940119783849}
+  m_PrefabAsset: {fileID: 0}

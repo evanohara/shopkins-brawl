@@ -6,14 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
+    path: Assets/04 - Scenes/00 - Intro.unity
     guid: cc9cacd04670aaf4e82c216884cc9bae
   - enabled: 1
-    path: Assets/Scenes/SelectionMenu.unity
+    path: Assets/04 - Scenes/01 - MainMenu.unity
+    guid: c0995bc1df7770b4085409e34e40b502
+  - enabled: 1
+    path: Assets/04 - Scenes/01 - OptionsMenu.unity
+    guid: a007a1b9ce3ade04e8ea106d4c64378d
+  - enabled: 1
+    path: Assets/04 - Scenes/02 - SelectionMenu.unity
     guid: af9f618ed2a7954498624a9cd91531ac
   - enabled: 1
-    path: Assets/Scenes/StreetsOfShopville.unity
+    path: Assets/04 - Scenes/03 - StageSelectionMenu.unity
+    guid: 6383e4b1740a12a469d1f5dda3cb9c3a
+  - enabled: 1
+    path: Assets/04 - Scenes/03 - StreetsOfShopville.unity
     guid: b7ac2d8c31fd6f544b67726d2bd7fa8e
+  - enabled: 1
+    path: Assets/04 - Scenes/04 - ShopvilleSlums.unity
+    guid: f22e4f1c4e067b64197d3af297aa87f7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 6ea76026ed190454791670c47d6d4f2d,
       type: 2}
