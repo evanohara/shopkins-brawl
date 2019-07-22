@@ -50,7 +50,7 @@ public class PlayerCharacterSelectionController : PlayerController
     {
         if (targetCharacter == null)
         {
-            Debug.LogError(name + ": Target is null.");
+            Debug.Log(name + ": Target is null.", DLogType.Exception);
             return;
         }
         playerSelectionTargetUI.FinalizeAnimation();

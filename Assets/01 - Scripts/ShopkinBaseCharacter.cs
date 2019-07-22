@@ -49,10 +49,6 @@ public abstract class ShopkinBaseCharacter : MonoBehaviour
         float lh = player.GetHorizontal();
         animator.SetFloat("Horizontal", lh);
 
-        if (Input.GetButtonDown("Joy1A"))
-        {
-            print("DOWN");
-        }
         if (player.IsTryingToMove())
         {
 

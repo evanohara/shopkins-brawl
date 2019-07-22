@@ -22,7 +22,7 @@ public static class CharacterCollisionHelper
                 collider.GetComponent<Item>().OnPickUP(character);
                 break;
             default:
-                Debug.LogWarning("Unhandled Collision with " + collider + ". Tag: " + collider.tag);
+                Debug.Log("Unhandled Collision with " + collider + ". Tag: " + collider.tag, DLogType.Exception);
                 break;
         }
     }

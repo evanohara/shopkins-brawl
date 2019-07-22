@@ -17,7 +17,6 @@ public class Timer : MonoBehaviour
             _timeRemaining -= Time.deltaTime;
             if (_timeRemaining < 0f)
             {
-                Debug.Log("Pause N Trig");
                 _triggered = true;
                 Paused = true;
             }
@@ -44,7 +43,7 @@ public class Timer : MonoBehaviour
     public void ResetAndStart()
     {
         if (_maxTime == null)
-            Debug.LogError("Timer never set.");
+            Debug.Log("Timer never set.");
         else
         {
             _triggered = false;

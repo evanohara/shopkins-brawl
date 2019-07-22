@@ -238,6 +238,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 960c1eb375badf74b943f5da88f08cf9, type: 3}
   - {fileID: 8300000, guid: e22871ca77449914cb42e7a827b10d9e, type: 3}
   - {fileID: 8300000, guid: 76de0fdb05e6b254291b3fb3e6932fb9, type: 3}
+  _music: []
 --- !u!1 &881551840296730237
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +506,8 @@ GameObject:
   - component: {fileID: 8517413463814036575}
   - component: {fileID: 2323468856916304978}
   - component: {fileID: 8941266078983547962}
+  - component: {fileID: 9110021547820470304}
+  - component: {fileID: 913614319166541298}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -559,6 +562,36 @@ MonoBehaviour:
   - {fileID: 1423975681861585252, guid: 1f2ddad3b9a5aef41b1eba5088ddc6c1, type: 3}
   - {fileID: 8117381893050319899, guid: 96a9fe61342d93d4f82753a062b40c4d, type: 3}
   - {fileID: 6226118455115433274, guid: b71f4f12030c61a4f9dd44b6fdd7e4e4, type: 3}
+--- !u!114 &9110021547820470304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106860409247214322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7898f806a21352c469f3ec623c477a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAbsolutePath: 0
+  fileName: sbDebug
+  absolutePath: A:/UnityLogs
+  filePath: 
+  filePathFull: 
+  count: 0
+--- !u!114 &913614319166541298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106860409247214322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a9ea4b65f68034eb75b180ed0dcdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6448465125481644962
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +739,8 @@ MonoBehaviour:
   canvas: {fileID: 0}
   testInjector: {fileID: 0}
   testVariableExposer: {fileID: 0}
+  lead: {fileID: 0}
+  main: {fileID: 0}
 --- !u!1 &8993838807797856643
 GameObject:
   m_ObjectHideFlags: 0

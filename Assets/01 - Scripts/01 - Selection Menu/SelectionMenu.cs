@@ -115,7 +115,7 @@ public class SelectionMenu : MonoBehaviour
         {
             if (s.active && !s.SelectionFinalized)
             {
-                Debug.Log(name + ": Player Not Ready.");
+                Debug.Log(name + ": Player Not Ready.", DLogType.Log);
                 return false;
             }
         }
@@ -141,7 +141,7 @@ public class SelectionMenu : MonoBehaviour
                 return;
             }
         }
-        Debug.LogError(name + ": Target never set");
+        Debug.Log(name + ": Target never set", DLogType.Exception);
     }
 
 
